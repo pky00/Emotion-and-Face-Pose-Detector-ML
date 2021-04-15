@@ -23,7 +23,7 @@ def fixImage(imagePath):
 	return
 
 
-def resize(imagePath):
+def resizeImage(imagePath):
 	image = cv2.imread(imagePath)
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	resized_image = cv2.resize(gray, (48,48))
