@@ -16,7 +16,10 @@ def fixImage(imagePath):
 	)
 
 	for (x, y, w, h) in faces:
-		gray_image = gray[y:y + h, x:x + w]
+		scale_factor = 0.15
+		h_scale_factor = int(h*scale_factor)
+		w_scale_factor = int(w*scale_factor)
+		gray_image = gray[y-h_scale_factor:y + h + h_scale_factor, x - w_scale_factor:x + w + w_scale_factor]
 		resized_image = cv2.resize(gray_image, (48,48))
 		cv2.imwrite("NEW_"+str(imagePath), resized_image)
 	
