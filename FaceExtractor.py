@@ -1,16 +1,8 @@
 import os
 import cv2
-from pathlib import Path
 
 import numpy
 from typing import List
-
-def splitPath(path: str) -> List:
-    """
-    Split path string into elements
-    """
-    parts = list(Path(path).parts)
-    return parts
 
 def saveAsJpg(path: str, img: numpy.ndarray) -> None:
     """
