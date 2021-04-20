@@ -23,7 +23,7 @@ def saveAsJpg(path: str, img: numpy.ndarray) -> None:
     fName = os.path.basename(path) # Get just filename e.g. image.jpg from /a/b/c/image.jpg
     fName = os.path.splitext(fName)[0] # Strip file extension
     fName = fName + ".jpg" # Set extension to .jpg
-    fName = "NEW_" + fName # Prepend "NEW_"
+    # fName = "NEW_" + fName # Prepend "NEW_"
     
     dir = os.path.dirname(path)
     newPath = os.path.join(dir, fName)
